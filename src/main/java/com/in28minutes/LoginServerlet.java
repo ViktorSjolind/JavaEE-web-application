@@ -24,7 +24,10 @@ public class LoginServerlet extends HttpServlet{
 		out.println("</html>");
 		*/
 		//path start from web-inf
-		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+		String name = request.getParameter("name");
+		System.out.println("name parameter=" + name);
+		request.setAttribute("name", name);
+		request.getRequestDispatcher("/WEB-INF/views/info.jsp").forward(request, response);
 		
 	}
 }

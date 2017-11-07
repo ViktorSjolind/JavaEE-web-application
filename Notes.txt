@@ -21,3 +21,10 @@
 //2. @WebServlet(urlPatterns = "/login.do")
 //3. doGet(HttpServletRequest request, HttpServletResponse response)
 //4. How is the response created?
+
+
+
+In browser:	http://localhost:8080/?name=viktor&password=somepass
+params: query string:	name:"viktor"
+Parameter passed between browser -> server
+Attribute servlet -> jsp

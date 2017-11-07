@@ -1,1 +1,1 @@
-# JavaWebDev
+# JEE web application

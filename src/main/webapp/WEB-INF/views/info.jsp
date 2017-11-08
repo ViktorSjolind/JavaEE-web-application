@@ -10,15 +10,25 @@
 <body>
 <%
 //scriptlet
-System.out.println(request.getParameter("name"));
+//System.out.println(request.getParameter("name"));
 Date date = new java.util.Date();
 %>
 
 <%//expression language %>
-<p>Blue is reed, wow such deep, hello ${name}</p>
+<p>Blue is reed, wow such deep, enter your name</p>
 
 <%//scriptlet expression %>
 <p><%=date%></p>
+
+
+<p>${errorMessage}</p>
+<%//post request %>
+<form action="/login.do" method="post">
+	Enter your name 
+	<input type="text" name ="inputName"/>
+	<input type="password" name="inputPassword"/>
+	<input type="submit" value="Login"/>
+</form>
 
 </body>
 </html>

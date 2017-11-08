@@ -22,9 +22,18 @@
 //3. doGet(HttpServletRequest request, HttpServletResponse response)
 //4. How is the response created?
 
-
+Servlet
+PrintWriter out = response.getWriter();
+out.println("<html>");
 
 In browser:	http://localhost:8080/?name=viktor&password=somepass
+String name = request.getParameter("name");
 params: query string:	name:"viktor"
+
+
 Parameter passed between browser -> server
+request.setAttribute("name", name);
 Attribute servlet -> jsp
+
+
+Form is safer, post request
